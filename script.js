@@ -26,9 +26,6 @@ function addItemBlock(element) {
     add(element, onSuccessAdd);
 }
 
-
-////// Важный функционал программы. Тело! 
-
 function onSubmitFun(){
     var todoInput = document.querySelector('.todo-input');
 
@@ -64,8 +61,6 @@ function removeItem(buttonRemove) {
   
     }, 10)
 }
-////////=======================//////////////////////
-
 
 ///// Меняем тему на темную
 function onSubmitTheme(){
@@ -77,8 +72,6 @@ function onSubmitTheme(){
         $("#my-style").attr('href', 'style.css');
     }
 }
-///////////
-
 
 //// Выбор рандом места у кнопки удалить список (пока отключил)
 function handlerEnter() {
@@ -154,7 +147,6 @@ function add(newItem, callBack) {
       }
     };
 }
-/////////////==============
 
 /////// попытка сохранить элемент по дате (надо доделать)
 function getDate(el, d) {
@@ -164,10 +156,8 @@ function getDate(el, d) {
     }
     
 }
-///////////////////
 
 ///////// Смена слайдеров
-
 function handlerSliderTickets() {
     $(".first__slider_tickets").addClass("active_slider");
     $(".first__slider_favorites").removeClass("active_slider");
@@ -182,11 +172,7 @@ function handlerSliderFavorite() {
     $(".first__favorites").css('display', 'block');
 }
 
-///////////////
-
-
 init();
-
 
 $(".btn-submit").click(onSubmitFun);
 $(".btn-theme").click(onSubmitTheme);
