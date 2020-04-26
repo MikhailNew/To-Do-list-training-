@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="my-style" rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header__menu">
+                <h1>hello! i todolist</h1>
+                <div class="menu_btns">
+                    <button class="header__btn btn-theme">Dark Theme</button>
+                </div>
+            </div>     
+        </div>
+    </header>
+    <section class="first">
+        <div class="container">
+            <div class="first__slider">
+                <div class="first__slider_tickets first__slider_style active_slider" onclick="handlerSliderTickets()">Ticket</div>
+                <div class="first__slider_favorites first__slider_style" onclick="handlerSliderFavorite()">Favorites</div>
+            </div>
+            <div class="first__tickets">
+                <input class="todo-input" type="text" required placeholder="input your text..."> 
+                <button class="btn-submit">Save</button>
+                <ul class="list-items"></ul>
+            </div>
+            <div class="first__favorites">
+                <button class="btn-showDate">Show</button>
+                <div class="first__favorites_list"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="C:\node\node_modules\jquery\dist\jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
