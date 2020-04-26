@@ -1,0 +1,212 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+}
+input, button{
+    outline:none;
+}
+ul{
+    margin: 0px;
+}
+ul li{
+    list-style-type: none;
+}
+
+.container{
+    content: '';
+    width: 780px;
+    margin: 0px auto;
+}
+.header__menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_btns{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.header__btn{
+    height: 30px;
+    background: #C2C2C2;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+.header__btn:active{
+    background: black;
+    color: white;
+    box-shadow: none;
+}
+header{
+    background: #FF9393;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px 0px;
+}
+h1{
+    display: inline-block;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+}
+.first{
+    background: #C4C4C4;
+    position: relative;
+    padding-bottom: 40px;
+    min-height: 600px;
+}
+.first__slider{
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+}
+.first__slider_style{
+    cursor: pointer;
+    padding: 10px 20px;
+    border: 1px solid #FF9393;
+    border-top: none;
+    border-radius: 3px;
+}
+.active_slider{
+    border-bottom: 4px solid #FF9399;
+    border-radius: 5px;
+    box-shadow: inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.btn-showDate{
+    width: 158px;
+    height: 69px;
+    background: #C2C2C2;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 36px;
+    padding: 0px;
+    margin-top: 30px;
+}
+.first__favorites_list{
+    width: 100%;
+    min-height: 447px;
+    background: #C4C4C4;
+    box-shadow: 0px 0px 20px #000000;
+    border-radius: 5px;
+    border: 0px;
+    padding: 31px 25px 31px 20px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+.first__favorites{
+    display: none;
+}
+.first__tickets{
+    display: block;
+}
+.todo-input{
+    width: 590px;
+    height: 69px;
+    background: #C2C2C2;
+    box-shadow: 0px 0px 10px #000000;
+    border: 0px;
+    border-radius: 5px;
+    margin: 30px 0px;
+    font-size: 36px;
+    line-height: 42px;
+    color: #818181;
+    padding: 0px 0px 0px 20px;
+    box-sizing: border-box;
+}
+.btn-submit{
+    width: 158px;
+    height: 69px;
+    background: #C2C2C2;
+    box-shadow: 0px 0px 10px #000000;
+    border-radius: 5px;
+    border: 0px;
+    font-size: 36px;
+    padding: 0px;
+    float: right;
+    margin: 30px 0px;
+}
+.list-items{
+    width: 100%;
+    min-height: 447px;
+    background: #C4C4C4;
+    box-shadow: 0px 0px 20px #000000;
+    border-radius: 5px;
+    border: 0px;
+    padding: 31px 25px 31px 20px;
+    box-sizing: border-box;
+}
+.btn_delete{
+    float: right;
+    width: 52px;
+    height: 52px;
+    background: #FF9393;
+    border-radius: 50%;
+    border: 1px solid #FF9393;
+    margin-right: -52px;
+    margin-top: -12px;
+    font-size: 36px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+.item_class{
+    margin-bottom: 22px;
+    width: 100%;
+    height: 66px;
+    line-height: 66px;
+    background: #E0E0E0;
+    border-radius: 5px;
+    padding-left: 19px;
+    padding-right: 40px;
+    box-sizing: border-box;
+
+    animation: slide 1s infinite;
+    animation-iteration-count: 1;
+}
+@keyframes slide {
+    0% {
+        margin-left: 50px;
+        opacity: 0.2;
+    }
+    100%{
+        margin-left: 0px;
+        opacity: 1;
+    }
+}
+.item--to-remove{
+    transition: all 1s;
+    opacity: 0;
+    margin: 0 0 22px 50px;
+}
+.item--slide-top{
+    transition: all 1s;
+    height: 0px;
+    margin-bottom: 0px;
+}
+.item__text{
+    float: left;
+    max-width: 650px;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.fake_block{
+    height: 66px;
+    margin-bottom: 22px;
+}
