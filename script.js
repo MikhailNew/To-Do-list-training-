@@ -16,7 +16,7 @@ function addItemOnScreen(el){
     //     btnEnterLeave[i].addEventListener('mouseover', handlerEnter);
     // }
 }
-
+//
 function getItemFromServer(element){
     addItemOnScreen(element);
 }
