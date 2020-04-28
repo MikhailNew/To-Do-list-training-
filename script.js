@@ -116,7 +116,7 @@ function getAll(callBack) {
       }
     };
 }
-
+//test
 // Удаление элемента с сервера
 function remove(itemToRemove, callBack) {
     let xhr = new XMLHttpRequest();
