@@ -1,5 +1,5 @@
 // npm init // Enter
-// npm intall express
+// npm install express
 // node fileName
 
 var items = [];
