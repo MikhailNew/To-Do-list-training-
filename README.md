@@ -1,2 +1,6 @@
 # To-Do-list-training-
-В процессе изучения JS, Jquery, CSS, HTML, полученные навыки применялись к Todo-list. Целью не был дизайн, цвет и т.п. В этом задании отрабатывались навыки работы.
+- npm init
+- npm i express
+- node server 
+- npm run build
+- go to browser index.html
