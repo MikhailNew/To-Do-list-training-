@@ -1,10 +1,9 @@
-let text = [];
 let DATEarr = [];
 const NAME_STORAGE_TODO_ITEMS = 'NAME_STORAGE_TODO_ITEMS';
 const DATE_STORAGE = 'DATE_STORAGE';
 flagOfTheme = false;
 
-function addItemOnScreen(el){
+function addItemOnScreen(el) {
     var itemLi = document.createElement('li');
     var btnClass = 'btn_delete';
     var btnDelete = `<div class="item__text">${el}</div><button class="${btnClass}" onclick="removeItem(this)">X</button>`;
@@ -16,17 +15,13 @@ function addItemOnScreen(el){
     //     btnEnterLeave[i].addEventListener('mouseover', handlerEnter);
     // }
 }
-//
-function getItemFromServer(element){
-    addItemOnScreen(element);
-}
 
 function addItemBlock(element) { 
     addItemOnScreen(element);
     add(element, onSuccessAdd);
 }
 
-function onSubmitFun(){
+function onSubmitFun() {
     var todoInput = document.querySelector('.todo-input');
 
     if (todoInput.value === '') {
@@ -38,7 +33,7 @@ function onSubmitFun(){
 }
 
 function removeItem(buttonRemove) {
-    setTimeout( () => {
+    setTimeout(() => {
         let itemParent = buttonRemove.closest('li');
         var textChild = itemParent.querySelector('.item__text').textContent;
         remove(textChild, onSuccessRemove);
@@ -48,11 +43,11 @@ function removeItem(buttonRemove) {
         fakeLi.classList.add('fake_block');
         let firstParentBlock = itemParent.closest('ul');
         
-        setTimeout( () => {
+        setTimeout(() => {
             firstParentBlock.replaceChild(fakeLi,itemParent);
             fakeLi.classList.add('item--slide-top');
 
-            setTimeout( () => {
+            setTimeout(() => {
                 fakeLi.classList.remove('fake_block');
             },100)
 
@@ -63,9 +58,9 @@ function removeItem(buttonRemove) {
 }
 
 ///// Меняем тему на темную
-function onSubmitTheme(){
-
+function onSubmitTheme() {
     flagOfTheme = !flagOfTheme;
+
     if (flagOfTheme) {
         $("#my-style").attr('href', 'style-black.css');
     } else {
@@ -84,14 +79,13 @@ function randomPlace(min,max) {
     return Math.floor(Math.random() *(max-min)+min);
 }
 
-///// -------------- Проверяем наличие информации 
 function init() {
     getAll(onSuccess);
 }
 
 function onSuccess(items) {
     items.forEach( function (element) {
-        getItemFromServer(element);
+        addItemOnScreen(element);
     });
   }
 function onSuccessAdd(items) {
@@ -101,28 +95,12 @@ function onSuccessRemove(items) {
     console.log(items);
   }
 
-//// Получение элементов с сервера
 function getAll(callBack) {
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `http://localhost:3000/item`);
     xhr.send();
     xhr.onload = function () {
-      if (xhr.status != 200) {
-        alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
-      } else {
-        let response = JSON.parse(xhr.response);
-        callBack(response) 
-        
-      }
-    };
-}
-//test
-// Удаление элемента с сервера
-function remove(itemToRemove, callBack) {
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:3000/itemRemove?title=${itemToRemove}`);
-    xhr.send();
-    xhr.onload = function () {
+
       if (xhr.status != 200) {
         alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
       } else {
@@ -130,9 +108,23 @@ function remove(itemToRemove, callBack) {
         callBack(response);
       }
     };
-  }
+}
 
-// Добавление элемента на сервер
+function remove(itemToRemove, callBack) {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', `http://localhost:3000/itemRemove?title=${itemToRemove}`);
+    xhr.send();
+    xhr.onload = function () {
+
+      if (xhr.status != 200) {
+        alert(`Ошибка ${xhr.status}: ${xhr.statusText}`);
+      } else {
+        let response = JSON.parse(xhr.response);
+        callBack(response);
+      }
+    };
+}
+
 function add(newItem, callBack) {
 
     let xhr = new XMLHttpRequest();
@@ -157,7 +149,6 @@ function getDate(el, d) {
     
 }
 
-///////// Смена слайдеров
 function handlerSliderTickets() {
     $(".first__slider_tickets").addClass("active_slider");
     $(".first__slider_favorites").removeClass("active_slider");
