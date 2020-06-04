@@ -2,4 +2,4 @@
 - npm init
 - npm run build
 - node server 
-- go to browser index.html
+- go to browser localhost:3000
