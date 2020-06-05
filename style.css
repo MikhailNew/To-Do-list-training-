@@ -1,40 +1,39 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
 }
-p{
+p {
     margin: 0px;
     padding: 0px;
     display: inline;
 }
-input, button{
+input, button {
     outline:none;
 }
-ul{
+ul {
     margin: 0px;
 }
-ul li{
+ul li {
     list-style-type: none;
 }
-
-.container{
+.container {
     content: '';
     width: 780px;
     margin: 0px auto;
 }
-.header__menu{
+.header__menu {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
 }
-.menu_btns{
+.menu_btns {
     width: 100%;
     display: flex;
     justify-content: space-around;
     margin-top: 15px;
 }
-.header__btn{
+.header__btn {
     height: 30px;
     background: #C2C2C2;
     box-shadow: 0px 0px 10px #000000;
@@ -43,49 +42,49 @@ ul li{
     font-size: 20px;
     padding: 0px 10px;
 }
-.header__btn:active{
+.header__btn:active {
     background: black;
     color: white;
     box-shadow: none;
 }
-header{
+header {
     background: #FF9393;
     border: 1px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 15px 0px;
 }
-h1{
+h1 {
     display: inline-block;
     font-size: 36px;
     text-transform: uppercase;
     text-align: center;
     margin: 0px;
 }
-.first{
+.first {
     background: #C4C4C4;
     position: relative;
     padding-bottom: 40px;
     min-height: 600px;
 }
-.first__slider{
+.first__slider {
     display: flex;
     justify-content: start;
     flex-direction: row;
 }
-.first__slider_style{
+.first__slider_style {
     cursor: pointer;
     padding: 10px 20px;
     border: 1px solid #FF9393;
     border-top: none;
     border-radius: 3px;
 }
-.active_slider{
+.active_slider {
     border-bottom: 4px solid #FF9399;
     border-radius: 5px;
     box-shadow: inset 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.btn-showDate{
+.btn-showDate {
     width: 158px;
     height: 69px;
     background: #C2C2C2;
@@ -96,7 +95,7 @@ h1{
     padding: 0px;
     margin-top: 30px;
 }
-.first__favorites_list{
+.first__favorites_list {
     width: 100%;
     min-height: 447px;
     background: #C4C4C4;
@@ -107,13 +106,13 @@ h1{
     box-sizing: border-box;
     margin-top: 30px;
 }
-.first__favorites{
+.first__favorites {
     display: none;
 }
-.first__tickets{
+.first__tickets {
     display: block;
 }
-.todo-input{
+.todo-input {
     width: 590px;
     height: 69px;
     background: #C2C2C2;
@@ -127,7 +126,7 @@ h1{
     padding: 0px 0px 0px 20px;
     box-sizing: border-box;
 }
-.btn-submit{
+.btn-submit {
     width: 158px;
     height: 69px;
     background: #C2C2C2;
@@ -139,7 +138,7 @@ h1{
     float: right;
     margin: 30px 0px;
 }
-.list-items{
+.list-items {
     width: 100%;
     min-height: 447px;
     background: #C4C4C4;
@@ -149,7 +148,7 @@ h1{
     padding: 31px 25px 31px 20px;
     box-sizing: border-box;
 }
-.btn_delete{
+.btn_delete {
     float: right;
     width: 52px;
     height: 52px;
@@ -162,7 +161,7 @@ h1{
     z-index: 10;
     box-sizing: border-box;
 }
-.item_class{
+.item_class {
     margin-bottom: 22px;
     width: 100%;
     height: 66px;
@@ -172,7 +171,6 @@ h1{
     padding-left: 19px;
     padding-right: 40px;
     box-sizing: border-box;
-
     animation: slide 1s infinite;
     animation-iteration-count: 1;
 }
@@ -186,17 +184,17 @@ h1{
         opacity: 1;
     }
 }
-.item--to-remove{
+.item--to-remove {
     transition: all 1s;
     opacity: 0;
     margin: 0 0 22px 50px;
 }
-.item--slide-top{
+.item--slide-top {
     transition: all 1s;
     height: 0px;
     margin-bottom: 0px;
 }
-.item__text{
+.item__text {
     float: left;
     max-width: 650px;
     font-size: 24px;
@@ -206,7 +204,7 @@ h1{
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.fake_block{
+.fake_block {
     height: 66px;
     margin-bottom: 22px;
 }

@@ -1,7 +1,7 @@
 let DATEarr = [];
 const NAME_STORAGE_TODO_ITEMS = 'NAME_STORAGE_TODO_ITEMS';
 const DATE_STORAGE = 'DATE_STORAGE';
-flagOfTheme = false;
+let flagOfTheme = false;
 
 function addItemOnScreen(el) {
     var itemLi = document.createElement('li');
@@ -22,8 +22,7 @@ function addItemBlock(element) {
 }
 
 function onSubmitFun() {
-    var todoInput = document.querySelector('.todo-input');
-
+    let todoInput = document.querySelector('.todo-input');
     if (todoInput.value === '') {
         alert('Пустое поле! Повторите ошибку!');
     } else {
@@ -35,10 +34,9 @@ function onSubmitFun() {
 function removeItem(buttonRemove) {
     setTimeout(() => {
         let itemParent = buttonRemove.closest('li');
-        var textChild = itemParent.querySelector('.item__text').textContent;
+        let textChild = itemParent.querySelector('.item__text').textContent;
         remove(textChild, onSuccessRemove);
         itemParent.classList.add('item--to-remove');
-
         let fakeLi = document.createElement('li');
         fakeLi.classList.add('fake_block');
         let firstParentBlock = itemParent.closest('ul');
@@ -57,7 +55,6 @@ function removeItem(buttonRemove) {
     }, 10)
 }
 
-///// Меняем тему на темную
 function onSubmitTheme() {
     flagOfTheme = !flagOfTheme;
 
@@ -68,7 +65,6 @@ function onSubmitTheme() {
     }
 }
 
-//// Выбор рандом места у кнопки удалить список (пока отключил)
 function handlerEnter() {
     this.style.position = 'absolute';
     this.style.top = randomPlace(20, 500) + 'px';
@@ -87,13 +83,15 @@ function onSuccess(items) {
     items.forEach( function (element) {
         addItemOnScreen(element);
     });
-  }
+}
+
 function onSuccessAdd(items) {
     console.log(items);
 }
+
 function onSuccessRemove(items) {
     console.log(items);
-  }
+}
 
 function getAll(callBack) {
     let xhr = new XMLHttpRequest();
@@ -126,7 +124,6 @@ function remove(itemToRemove, callBack) {
 }
 
 function add(newItem, callBack) {
-
     let xhr = new XMLHttpRequest();
     xhr.open('GET', `http://localhost:3000/itemAdd?title=${newItem}`);
     xhr.send();
@@ -138,15 +135,6 @@ function add(newItem, callBack) {
         callBack(response);
       }
     };
-}
-
-/////// попытка сохранить элемент по дате (надо доделать)
-function getDate(el, d) {
-    let user = {
-        el,
-        d
-    }
-    
 }
 
 function handlerSliderTickets() {
